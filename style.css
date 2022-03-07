@@ -184,6 +184,13 @@ main ul {
     padding-right: 5%;
 }
 
+main ol {
+    padding-top: 0%;
+    margin-left: 1px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 
 /*--------------footer---------------*/
 
