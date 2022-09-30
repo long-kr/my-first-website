@@ -160,10 +160,8 @@ main ul {
 }
 
 main ol {
-    padding-top: 0%;
-    margin-left: 1px;
-    padding-left: 5%;
-    padding-right: 5%;
+    margin: 1%;
+    padding-left: 4%;
 }
 
 main h3 {
