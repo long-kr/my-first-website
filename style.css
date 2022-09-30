@@ -113,8 +113,7 @@ header h1 {
     float: left;
     margin-top: 1%;
     margin-left: 2%;
-    transition: all 2s;
-    transform-style: flat;
+    transition: all 5s;
 }
 
 header nav {
@@ -123,6 +122,8 @@ header nav {
     margin-top: 5%;
     margin-right: 2%;
     margin-bottom: 1%;
+    transition:all 5s;
+    transition-delay: 200ms;
 }
 
 /*-------------trying to make inline----------------*/
