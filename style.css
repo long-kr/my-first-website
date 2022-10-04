@@ -47,7 +47,7 @@ img {
 
 Header a {
     font-family: 'Times', Helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 30px;
     margin-left: 30px;
 }
 
@@ -114,17 +114,12 @@ header h1 {
 }
 
 nav {
+    display: block;
     position: fixed;
-    right: 0;
-    top: 40%;
-    padding: 0;
-    margin: 0;
+    top: 60%;
+    right: 30px;
     transform: rotate(90deg);
-}
-
-header ul {
-    list-style-type: none;
-    display: flex;
+    transform-origin: right;
 }
 
 /*-------------trying to make inline----------------*/
@@ -183,26 +178,25 @@ footer p {
 
     /*-------------header----------------*/
     nav {
-        /* border: 1px solid black; */
-        position: fixed;
-        right: 0;
-        top: 40%;
-        transform: rotate(90deg);
+        right: 12px;
+    }
+
+    header a {
+        font-size: 18px;
     }
 
     /*--------------aligning classes----------*/
     .box-align {
-        width: 85%;
+        width: 75%;
         margin: auto;
         text-align: left;
     }
 
     /*-------------main----------------*/
     main img {
-        width: 85%;
+        width: 75%;
         display: block;
         margin-left: auto;
         margin-right: auto;
-        
     }
 }
