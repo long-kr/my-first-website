@@ -1,5 +1,4 @@
 /*-------------body----------------*/
-
 body {
     font-family: Times, Times New Roman, serif;
     color: bisque;
@@ -110,7 +109,6 @@ header h1 {
     color: bisque;
     margin-top: 1%;
     margin-left: 2%;
-    transition: all 5s ease-out;
 }
 
 nav {
@@ -118,20 +116,19 @@ nav {
     position: fixed;
     top: 60%;
     right: 30px;
+    scroll-behavior: smooth;
     transform: rotate(90deg);
     transform-origin: right;
 }
 
-/*-------------trying to make inline----------------*/
-
-/* header:after,
-nav:after {
-    content: " ";
-    display: table;
-    clear: both;
-} */
-
 /*-------------main----------------*/
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
 main div {
     height: auto;
     padding-top: 1%;
@@ -139,7 +136,7 @@ main div {
 }
 
 main img {
-    width: 40%;
+    width: 30%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -171,10 +168,25 @@ footer p {
     font-family: Courier, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 36px;
     color: bisque;
+}
+
+.hidden { 
+    opacity: 0;
     transition: all 2s;
 }
 
+.show {
+    opacity: 1;
+}
+
 @media all and (max-width: 1200px) {
+    /*-------------body----------------*/
+    body {
+        font-family: Times, Times New Roman, serif;
+        color: bisque;
+        font-size: 18px;
+        background-color: #050114;
+    }
 
     /*-------------header----------------*/
     nav {
