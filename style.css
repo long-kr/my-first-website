@@ -74,24 +74,24 @@ Header a:active {
 /*----------------normal links-----------*/
 
 a {
-    font-size: 20px;
+    font-size: 32px;
     font-style: initial;
 }
 
 a:link {
-    color: blue;;
+    color: bisque;;
 }
 
 a:visited {
-    color: blue;
+    color: bisque;
 }
 
 a:hover {
-    color: black;
+    color: white;
 }
 
 a:active {
-    color: black;
+    color: white;
 }
 
 
@@ -172,11 +172,15 @@ footer p {
 
 .hidden { 
     opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
     transition: all 2s;
 }
 
 .show {
     opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }
 
 @media all and (max-width: 1200px) {
