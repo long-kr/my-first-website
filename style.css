@@ -9,8 +9,8 @@ body {
 /*--------------classes----------*/
 .intro {
     position: absolute;
-    top: 10vh;
-    left: 20vh;
+    top: 15%;
+    left: 15%;
     white-space: nowrap;
     display: block;
 }
@@ -18,8 +18,8 @@ body {
 .title {
     position: absolute;
     text-align: end;
-    top: 15vh;
-    right: 15vh;
+    top: 17%;
+    right: 15%;
 }
 
 .list-style {
@@ -44,6 +44,22 @@ section {
     place-items: center;
     align-content: center;
     min-height: 100vh;
+}
+
+.logos {
+    display: flex;
+}
+
+.logo:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.logo:nth-child(3) {
+    transition-delay: 600ms;
+}
+
+.logo:nth-child(4) {
+    transition-delay: 1200ms;
 }
 
 /*----------------Circle image------------*/
@@ -124,7 +140,7 @@ main div {
 }
 
 main img {
-    width: 30%;
+    width: 35%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -200,7 +216,7 @@ footer p {
 
     /*-------------main----------------*/
     main img {
-        width: 75%;
+        width: 45%;
         display: block;
         margin-left: auto;
         margin-right: auto;
