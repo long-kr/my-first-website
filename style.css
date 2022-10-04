@@ -6,44 +6,52 @@ body {
     background-color: #050114;
 }
 
-hr {
-    border: 1px solid rgb(109, 95, 95);
-    border-radius: 5px;
+/*--------------classes----------*/
+.intro {
+    position: absolute;
+    top: 10vh;
+    left: 20vh;
+    white-space: nowrap;
+    display: block;
 }
 
-/*--------------aligning classes----------*/
-
-.align-right {
-    text-align: right;
-}
-
-.align-left {
-    text-align: left;
-}
-
-.align-center {
-    text-align: center;
+.title {
+    position: absolute;
+    text-align: end;
+    top: 15vh;
+    right: 15vh;
 }
 
 .list-style {
     list-style-position: inside;
 }
 
-.box-align {
-    width: 40%;
-    margin: auto;
-    text-align: left;
+.hidden { 
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 2s;
 }
 
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
 
 /*----------------Circle image------------*/
-
 img {
     border-radius: 1%;
 }
 
 /*----------------Header links-----------*/
-
 Header a {
     font-family: 'Times', Helvetica, sans-serif;
     font-size: 30px;
@@ -72,9 +80,8 @@ Header a:active {
 
 
 /*----------------normal links-----------*/
-
 a {
-    font-size: 32px;
+    font-size: 34px;
     font-style: initial;
 }
 
@@ -96,23 +103,11 @@ a:active {
 
 
 /*-------------header----------------*/
-
-/* test HASH
-#HASH {
-    display: flex;
-    justify-content: space-between;
-}
-
-*/
 header h1 {
-    font-size: 36px;
-    color: bisque;
-    margin-top: 1%;
-    margin-left: 2%;
+    font-size: 60px;
 }
 
 nav {
-    display: block;
     position: fixed;
     top: 60%;
     right: 30px;
@@ -122,13 +117,6 @@ nav {
 }
 
 /*-------------main----------------*/
-section {
-    display: grid;
-    place-items: center;
-    align-content: center;
-    min-height: 100vh;
-}
-
 main div {
     height: auto;
     padding-top: 1%;
@@ -151,7 +139,9 @@ main ul {
 
 main ol {
     margin: 1%;
-    padding-left: 4%;
+    font-size: 34px;
+    display:flex;
+    gap: 100px;
 }
 
 main h3 {
@@ -163,27 +153,34 @@ main p {
 }
 
 /*--------------footer---------------*/
-
 footer p {
     font-family: Courier, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 36px;
-    color: bisque;
+    font-size: 60px;
 }
 
-.hidden { 
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 2s;
-}
-
-.show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-}
 
 @media all and (max-width: 1200px) {
+    /*--------------classes----------*/
+    .intro {
+        position: absolute;
+        top: 2%;
+        left: 5%;
+        white-space: nowrap;
+        display: block;
+    }
+
+    .title {
+        position: absolute;
+        text-align: end;
+        top: 10%;
+        right: 5%;
+    }
+
+    /*-------------header----------------*/
+    header h1 {
+        font-size: 32px;
+    }
+    
     /*-------------body----------------*/
     body {
         font-family: Times, Times New Roman, serif;
@@ -201,18 +198,28 @@ footer p {
         font-size: 18px;
     }
 
-    /*--------------aligning classes----------*/
-    .box-align {
-        width: 75%;
-        margin: auto;
-        text-align: left;
-    }
-
     /*-------------main----------------*/
     main img {
         width: 75%;
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    main ol {
+        margin: 1%;
+        font-size: 24px;
+        display: flex;
+        gap: 30px;
+    }
+    
+    a {
+        font-size: 24px;
+    }
+    /*--------------footer---------------*/
+    footer p {
+        font-family: Courier, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 32px;
+        white-space: nowrap;
     }
 }
