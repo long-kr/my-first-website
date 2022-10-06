@@ -29,14 +29,14 @@ body {
 .hidden { 
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-100%);
+    /* transform: translateX(-100%); */
     transition: all 2s;
 }
 
 .show {
     opacity: 1;
     filter: blur(0);
-    transform: translateX(0);
+    /* transform: translateX(0); */
 }
 
 section {
@@ -130,6 +130,7 @@ nav {
     scroll-behavior: smooth;
     transform: rotate(90deg);
     transform-origin: right;
+    z-index: 1;
 }
 
 /*-------------main----------------*/
@@ -175,12 +176,11 @@ footer p {
 }
 
 
-@media all and (max-width: 1200px) {
-    /*--------------classes----------*/
+@media all and (max-width: 800px) { 
     .intro {
         position: absolute;
-        top: 2%;
-        left: 5%;
+        top: 5%;
+        left: 1%;
         white-space: nowrap;
         display: block;
     }
@@ -189,7 +189,27 @@ footer p {
         position: absolute;
         text-align: end;
         top: 10%;
-        right: 5%;
+        right: 3%;
+    }
+
+
+}
+
+@media all and (max-width: 1200px) {
+    /*--------------classes----------*/
+    .intro {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        white-space: nowrap;
+        display: block;
+    }
+
+    .title {
+        position: absolute;
+        text-align: end;
+        top: 12%;
+        right: 15%;
     }
 
     /*-------------header----------------*/
@@ -240,3 +260,4 @@ footer p {
         white-space: nowrap;
     }
 }
+
