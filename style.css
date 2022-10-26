@@ -7,25 +7,60 @@ body {
 }
 
 /*--------------classes----------*/
-.intro {
+.title {
     position: absolute;
     top: 15%;
-    left: 15%;
+    left: 12%;
     white-space: nowrap;
     display: block;
 }
 
-.title {
+.intro {
     position: absolute;
     text-align: end;
-    top: 17%;
+    top: 13%;
     right: 15%;
 }
 
-.list-style {
-    list-style-position: inside;
+.wrap {
+    width: 70%;
+    text-align: justify;
+
 }
 
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+/*----------------project section classes------------*/
+.flex-project {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+}
+
+.flex-child-project {
+    text-align: center;
+}
+
+.flex-child-project:first-child {
+    flex: 3;
+}
+
+.flex-child-project:not(:first-child) {
+    flex: 1;
+    align-self: flex-start;
+}
+
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+/*----------------animation classes------------*/
 .hidden { 
     opacity: 0;
     filter: blur(5px);
@@ -37,13 +72,6 @@ body {
     opacity: 1;
     filter: blur(0);
     /* transform: translateX(0); */
-}
-
-section {
-    display: grid;
-    place-items: center;
-    align-content: center;
-    min-height: 100vh;
 }
 
 .logos {
@@ -62,61 +90,92 @@ section {
     transition-delay: 1200ms;
 }
 
-/*----------------Circle image------------*/
-img {
-    border-radius: 1%;
+/*----------------image classes------------*/
+.img-selfpic {
+    border-radius: 4%;
+    width: 30%;
 }
 
-/*----------------Header links-----------*/
-Header a {
+.img-project {
+    width: 80%;
+    border: 1px solid #ddd;
+    padding: 5px;
+    background-color: white;
+}
+
+/*----------------Header links classes-----------*/
+nav a {
     font-family: 'Times', Helvetica, sans-serif;
     font-size: 30px;
     margin-left: 30px;
 }
 
-Header a:link {
+nav a:link {
     text-decoration: none;
     color: bisque;
 }
 
-Header a:visited {
+nav a:visited {
     color: bisque;
     text-decoration: none;
 }
 
-Header a:hover {
+nav a:hover {
     color: white;
     text-decoration: none;
 }
 
-Header a:active {
+nav a:active {
     color: white;
     text-decoration: none;
 }
 
 
-/*----------------normal links-----------*/
-a {
+/*----------------contact links-----------*/
+a.contact {
     font-size: 34px;
     font-style: initial;
-}
-
-a:link {
-    color: bisque;;
-}
-
-a:visited {
     color: bisque;
 }
 
-a:hover {
+a.contact:link {
+    text-decoration: none;
+}
+
+a.contact:visited {
+    text-decoration: none;
+}
+
+a.contact:hover {
     color: white;
 }
 
-a:active {
+a.contact:active {
     color: white;
 }
 
+/*----------------project links classes-----------*/
+a.project-link {
+    font-size: 120%;
+    text-decoration: none;
+    color: bisque;
+}
+
+a.project-link:link {
+    text-decoration: none;
+}
+
+a.project-link:visited {
+    text-decoration: none;
+}
+
+a.project-link:hover {
+    color: white;
+}
+
+a.project-link:active {
+    color: white;
+}
 
 /*-------------header----------------*/
 header h1 {
@@ -138,14 +197,6 @@ main div {
     height: auto;
     padding-top: 1%;
     padding-bottom: 1%;
-}
-
-main img {
-    width: 35%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
 }
 
 main ul {
@@ -175,9 +226,8 @@ footer p {
     font-size: 60px;
 }
 
-
 @media all and (max-width: 800px) { 
-    .intro {
+    .title {
         position: absolute;
         top: 5%;
         left: 1%;
@@ -185,19 +235,23 @@ footer p {
         display: block;
     }
 
-    .title {
+    .intro {
         position: absolute;
         text-align: end;
         top: 10%;
         right: 3%;
     }
 
-
+    .wrap {
+        width: 80%;
+        text-align: justify;
+    
+    }
 }
 
 @media all and (max-width: 1200px) {
     /*--------------classes----------*/
-    .intro {
+    .title {
         position: absolute;
         top: 10%;
         left: 10%;
@@ -205,11 +259,21 @@ footer p {
         display: block;
     }
 
-    .title {
+    .intro {
         position: absolute;
         text-align: end;
         top: 12%;
         right: 15%;
+    }
+
+    .wrap {
+        width: 80%;
+        text-align: justify;
+    
+    }
+
+    .img-selfpic {
+        width: 45%;
     }
 
     /*-------------header----------------*/
@@ -219,14 +283,11 @@ footer p {
     
     /*-------------body----------------*/
     body {
-        font-family: Times, Times New Roman, serif;
-        color: bisque;
         font-size: 18px;
-        background-color: #050114;
     }
 
     /*-------------header----------------*/
-    nav {
+    header nav {
         right: 12px;
     }
 
@@ -235,13 +296,6 @@ footer p {
     }
 
     /*-------------main----------------*/
-    main img {
-        width: 45%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     main ol {
         margin: 1%;
         font-size: 24px;
