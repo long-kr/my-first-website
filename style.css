@@ -217,7 +217,8 @@ main h3 {
 }
 
 main p {
-    margin: 1%;
+    margin: 2%;
+    text-indent: 40px;
 }
 
 /*--------------footer---------------*/
